@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
+import vn.co.company.kimhao.data.source.Repository;
 import vn.co.company.kimhao.util.schedulers.BaseSchedulerProvider;
 
 public abstract class BasePresenterImpl<V extends BaseView> implements BasePresenter<V> {
@@ -14,12 +15,14 @@ public abstract class BasePresenterImpl<V extends BaseView> implements BasePrese
     public Context context;
 
     @Inject
-    BaseSchedulerProvider schedulerProvider;
+    protected BaseSchedulerProvider schedulerProvider;
+
+    @Inject
+    protected Repository repository;
 
     private CompositeDisposable mCompositeDisposable = new CompositeDisposable();
 
     public BasePresenterImpl() {
-        super();
     }
 
     @Override
