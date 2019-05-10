@@ -7,12 +7,9 @@ import vn.co.company.kimhao.ui.base.BasePresenterImpl;
 
 public class MainPresenter extends BasePresenterImpl<IMainView> implements IMainPresenter {
 
-    private Repository repository;
-
     @Inject
-    public MainPresenter(Repository repository) {
+    public MainPresenter() {
         super();
-        this.repository = repository;
     }
 
     @Override
