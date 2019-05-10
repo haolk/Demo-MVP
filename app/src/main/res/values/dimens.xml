@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="edittext_font_size_18">18sp</dimen>
+    <dimen name="textview_font_size_15">15sp</dimen>
+    <dimen name="textview_font_size_18">18sp</dimen>
+    <dimen name="btn_font_size_20">20sp</dimen>
+
+    <dimen name="pad_4">4dp</dimen>
+    <dimen name="pad_6">6dp</dimen>
+    <dimen name="pad_8">8dp</dimen>
+    <dimen name="pad_12">12dp</dimen>
+    <dimen name="pad_16">16dp</dimen>
+    <dimen name="pad_24">24dp</dimen>
+    <dimen name="pad_32">32dp</dimen>
+
+    <dimen name="size_12">12sp</dimen>
+    <dimen name="size_14">14sp</dimen>
+    <dimen name="size_16">16sp</dimen>
+    <dimen name="size_18">18sp</dimen>
+    <dimen name="size_20">20sp</dimen>
+    <dimen name="size_40">40sp</dimen>
+
+</resources>
