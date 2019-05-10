@@ -1,1 +1,1 @@
-Develop app Android ,IOS
+Develop app Android
