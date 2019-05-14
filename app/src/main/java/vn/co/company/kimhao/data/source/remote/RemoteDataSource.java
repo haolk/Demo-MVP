@@ -23,9 +23,4 @@ public class RemoteDataSource implements AppDataSource {
     public Observable<List<User>> uses() {
         return mAppApi.getListUser();
     }
-
-    @Override
-    public String text() {
-        return "Xin Chao";
-    }
 }

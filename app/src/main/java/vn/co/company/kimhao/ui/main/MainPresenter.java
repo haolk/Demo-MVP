@@ -14,6 +14,6 @@ public class MainPresenter extends BasePresenterImpl<IMainView> implements IMain
 
     @Override
     public void toast() {
-        view.showToast(repository.text());
+        view.showToast("Xin Chao");
     }
 }

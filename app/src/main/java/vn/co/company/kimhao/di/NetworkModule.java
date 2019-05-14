@@ -40,7 +40,7 @@ public class NetworkModule {
     @Remote
     Retrofit restAppApi(OkHttpClient client, GsonBuilder builder) {
         Retrofit.Builder retrofitBuilder = new Retrofit.Builder()
-                .baseUrl("Server")
+                .baseUrl("https://google.com/")
                 .addConverterFactory(GsonConverterFactory.create(builder.create()))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create());
         retrofitBuilder.client(client);

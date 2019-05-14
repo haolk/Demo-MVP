@@ -9,6 +9,4 @@ import retrofit2.http.GET;
 public interface AppApi {
     @GET
     Observable<List<User>> getListUser();
-
-    String text();
 }

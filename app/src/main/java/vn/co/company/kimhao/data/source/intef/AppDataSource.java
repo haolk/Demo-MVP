@@ -7,5 +7,4 @@ import vn.co.company.kimhao.data.model.User;
 
 public interface AppDataSource {
     Observable<List<User>> uses();
-    String text();
 }

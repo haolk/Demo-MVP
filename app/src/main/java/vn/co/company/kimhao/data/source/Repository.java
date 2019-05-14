@@ -24,9 +24,4 @@ public class Repository implements AppDataSource {
     public Observable<List<User>> uses() {
         return mRemoteDataSource.getListUser();
     }
-
-    @Override
-    public String text() {
-        return mRemoteDataSource.text();
-    }
 }
