@@ -8,12 +8,11 @@ import javax.inject.Inject;
 import dagger.Lazy;
 import vn.co.company.kimhao.R;
 import vn.co.company.kimhao.ui.base.BaseActivity;
+import vn.co.company.kimhao.ui.main.main1.Main1Fragment;
 import vn.co.company.kimhao.util.ActivityUtils;
 
-public class MainActivity extends BaseActivity<IMainPresenter> implements IMainView {
+public class MainActivity extends BaseActivity<MainContract.Presenter> implements MainContract.View {
 
-    @Inject
-    Lazy<MainFragment> mainFragmentLazyProvider;
 
     @Override
     public int getResIdLayout() {
@@ -25,20 +24,18 @@ public class MainActivity extends BaseActivity<IMainPresenter> implements IMainV
         super.onCreate(savedInstanceState);
         // TODO: Demo
         presenter.toast();
-
-        MainFragment mainFragment =
-                (MainFragment) getSupportFragmentManager().findFragmentById(R.id.flContainer);
-        if (mainFragment == null) {
-            // Get the fragment from dagger
-            mainFragment = mainFragmentLazyProvider.get();
-            ActivityUtils.addFragmentToActivity(
-                    getSupportFragmentManager(), mainFragment, R.id.flContainer);
-        }
-
+        showMain1();
     }
 
     @Override
     public void showToast(String text) {
         Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showMain1() {
+        Main1Fragment main1Fragment = new Main1Fragment();
+        MainActivity.this.supportFragmentInjector().inject(main1Fragment);
+        ActivityUtils.replaceFragmentToActivity(getSupportFragmentManager(), main1Fragment, R.id.flContainer);
     }
 }

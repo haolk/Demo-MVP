@@ -4,7 +4,7 @@ import javax.inject.Inject;
 
 import vn.co.company.kimhao.ui.base.BasePresenterImpl;
 
-public class MainPresenter extends BasePresenterImpl<IMainView> implements IMainPresenter {
+public class MainPresenter extends BasePresenterImpl<MainContract.View> implements MainContract.Presenter {
 
     @Inject
     public MainPresenter() {
@@ -13,6 +13,11 @@ public class MainPresenter extends BasePresenterImpl<IMainView> implements IMain
 
     @Override
     public void toast() {
-        view.showToast("Xin Chao");
+
+    }
+
+    @Override
+    public void showMain1() {
+        view.showMain1();
     }
 }

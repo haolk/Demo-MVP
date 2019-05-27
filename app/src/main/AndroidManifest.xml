@@ -24,12 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="vn.co.company.kimhao.ui.ticketpurhchase.TicketPurchaseActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="vn.co.company.kimhao.ui.payment.PaymentActivity"
-            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package vn.co.company.kimhao.ui.main;
+package vn.co.company.kimhao.ui.main.main2;
 
 import android.view.View;
 
@@ -7,17 +7,17 @@ import javax.inject.Inject;
 import vn.co.company.kimhao.R;
 import vn.co.company.kimhao.ui.base.BaseActivity;
 import vn.co.company.kimhao.ui.base.BaseFragment;
-import vn.co.company.kimhao.util.schedulers.anotation.ActivityScoped;
+import vn.co.company.kimhao.util.schedulers.anotation.FragmentScoped;
 
-@ActivityScoped
-public class MainFragment extends BaseFragment<IMainPresenter> {
+@FragmentScoped
+public class Main2Fragment extends BaseFragment<Main2Contract.Presenter> implements Main2Contract.View {
     @Inject
-    public MainFragment() {
+    public Main2Fragment() {
     }
 
     @Override
     public int getResIdLayout() {
-        return R.layout.main_frag;
+        return R.layout.main1_frag;
     }
 
     @Override
@@ -27,6 +27,5 @@ public class MainFragment extends BaseFragment<IMainPresenter> {
 
     @Override
     public void setView(View view) {
-
     }
 }
